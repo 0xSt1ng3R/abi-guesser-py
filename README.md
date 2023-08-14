@@ -3,6 +3,18 @@
 A Pythonic version of [abi-guesser](https://github.com/openchainxyz/abi-guesser/).
 All credit goes to [samczsun](https://github.com/samczsun) for the original development; this is a direct 1-to-1 replication of his work.
 
+## Installation
+
+```
+pip install abi_guesser
+```
+
 ## Usage
 
-check examples.py
+```python
+>>> from abi_guesser import guess_fragment
+>>> guess_fragment("0x38ed173900000000000000000000000000000000000000000000000000000000389fd9800000000000000000000000000000000000000000004607aa2b3b11fb9d4c000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000032baf5624fed24e66feaeb9c3fb1cad9e0960cc80000000000000000000000000000000000000000000000000000000064da7d310000000000000000000000000000000000000000000000000000000000000003000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000c8de43bfe33ff496fa14c270d9cb29bda196b9b5")
+'guessed_38ed1739(uint256,uint256,address[],address,uint256)'
+>>>
+# swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline)
+```

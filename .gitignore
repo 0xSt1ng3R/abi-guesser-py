@@ -1,0 +1,12 @@
+
+.pypirc
+build/lib/abi-guesser/lib.py
+build/lib/abi-guesser/__init__.py
+abi_guesser.egg-info/top_level.txt
+abi_guesser.egg-info/SOURCES.txt
+abi_guesser.egg-info/requires.txt
+abi_guesser.egg-info/PKG-INFO
+abi_guesser.egg-info/dependency_links.txt
+abi-guesser/__pycache__/lib.cpython-311.pyc
+abi_guesser/__pycache__/lib.cpython-311.pyc
+dist/abi_guesser-0.1.tar.gz

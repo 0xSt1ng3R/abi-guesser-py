@@ -2,7 +2,7 @@ from eth_abi import encode
 from hexbytes import HexBytes
 from eth_utils import function_signature_to_4byte_selector
 
-from guess_abi import guess_fragment
+from abi_guesser import guess_fragment
 
 HANDWRITTEN_TESTCASES = [
     {
