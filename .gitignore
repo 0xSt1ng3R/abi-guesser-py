@@ -10,3 +10,4 @@ abi_guesser.egg-info/dependency_links.txt
 abi-guesser/__pycache__/lib.cpython-311.pyc
 abi_guesser/__pycache__/lib.cpython-311.pyc
 dist/abi_guesser-0.1.tar.gz
+dist/abi_guesser-0.2.tar.gz
