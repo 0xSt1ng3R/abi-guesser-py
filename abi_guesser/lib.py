@@ -436,17 +436,18 @@ def infer_types(params: List[str], vals: List) -> List[str]:
 
     return result
 
-# assume the calldata is "well-formed". by well-formed, we mean that all the static parameters come first,
-# then all the dynamic parameters come after. we assume there is no overlaps in dynamic parameters
-# and all trailing zeros are explicitly specified
-def guess_abi_encoded_data(data_bytes: str) -> Optional[List[str]]:
-    data = decode_hex(data_bytes)
-    params = decode_well_formed_tuple(0, data, 0, [], len(data), None, None)
+def guess_abi_encoded_data(calldata: str) -> Optional[List[str]]:
+    data_bytes = decode_hex(calldata)
+
+    if not data_bytes:
+        return None
+    
+    params = decode_well_formed_tuple(0, data_bytes[4:], 0, [], len(data_bytes[4:]), None, None)
     
     if params is None:
         return None
 
-    return infer_types(params, decode_abi_data(params, data))
+    return infer_types(params, decode_abi_data(params, data_bytes[4:]))
 
 def guess_fragment(calldata: str) -> Optional[str]:
     data_bytes = decode_hex(calldata)
