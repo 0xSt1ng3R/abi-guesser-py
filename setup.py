@@ -5,7 +5,7 @@ from setuptools import (
 
 setup(
     name="abi_guesser",
-    version="0.2",
+    version="0.3",
     packages=find_packages(),
     install_requires=[
         "eth-abi>=4.1.0", 
